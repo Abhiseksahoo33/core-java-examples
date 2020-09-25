@@ -4,7 +4,7 @@ public class Static {
 
     void m()
     {
-        System.out.println("abhiek sahoo");
+        System.out.println("Abhiek sahoo");
     }
     static {
         System.out.println("hello");
