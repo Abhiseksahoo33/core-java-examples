@@ -8,6 +8,7 @@ public class Static {
     }
     static {
         System.out.println("hello");
+        System.out.println("this is upadted");
     }
 
 
