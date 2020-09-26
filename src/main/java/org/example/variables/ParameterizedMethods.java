@@ -16,4 +16,3 @@ int result=sum(10,20);
  * output
  * sum of two numbers is = 30
  */
-/
