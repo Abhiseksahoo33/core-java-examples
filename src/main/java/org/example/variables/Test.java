@@ -13,7 +13,7 @@ public class Test {
     static {
 
         String name = "static block";
-        System.out.println("2nd static block: "+name);
+        System.out.println("2nd static block here: "+name);
 
     }
     public static void main(String[] args) {
@@ -25,6 +25,6 @@ public class Test {
 }
 
 /*  output -   1st static block: 1
-2nd static block: static block
+2nd static block here: static block
 sout inside main ()
 */
