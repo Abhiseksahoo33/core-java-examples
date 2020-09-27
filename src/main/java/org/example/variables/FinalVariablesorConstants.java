@@ -19,9 +19,8 @@ public class FinalVariablesorConstants {
 }
 
 /**
- * 
+ *
  * output
  * value of x = 20
  * value of y = 34
  */
-/
