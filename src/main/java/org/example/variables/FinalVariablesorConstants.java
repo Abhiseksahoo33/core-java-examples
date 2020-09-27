@@ -9,12 +9,13 @@ public class FinalVariablesorConstants {
  }
     {
         int y=34;
-        System.out.println("value of y = "+y); //  value of y will change because y is nonstatic
+        System.out.println("value of y (local) = "+y); //  value of y will change because y is nonstatic
     }
 
     public static void main(String[] args) {
         System.out.println("value of x = "+x);
         FinalVariablesorConstants o4=new FinalVariablesorConstants();
+        System.out.println("value of y (global and final/constant = "+o4.y);
     }
 }
 
