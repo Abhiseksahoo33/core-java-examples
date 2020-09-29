@@ -1,6 +1,6 @@
 package org.example.classobject;
 
-public abstract class AddmissionGrade {
+public  class AddmissionGrade {
    public static String studentname;
 
     public static int markofstudent;
