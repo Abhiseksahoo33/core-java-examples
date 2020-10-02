@@ -24,6 +24,8 @@ package org.example.classobject.addmissionpackage1;
         System.out.println(var3);
         System.out.println(var2);
         System.out.println(var1==var2);
+        System.out.println(var1.hashCode());
+        System.out.println(var1.hashCode()==var2.hashCode());
 
     }
 }
