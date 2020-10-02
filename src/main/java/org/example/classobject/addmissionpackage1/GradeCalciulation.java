@@ -10,10 +10,10 @@ class GradeCalculation {
 
 
     int scholarshipcalculation( ) {
-        if (markinpercentage>100)
+        if (markinpercentage>100) {
             System.out.println("invalid calculation of percentage");
-            System.out.println("markin percentage of "+nameofstudent+" is "+markinpercentage);
-              //  break ;
+            return markinpercentage;
+        }
         if (markinpercentage > 90 && markinpercentage <= 100)
            return 6000;
         if (markinpercentage >= 60 && markinpercentage < 90)
