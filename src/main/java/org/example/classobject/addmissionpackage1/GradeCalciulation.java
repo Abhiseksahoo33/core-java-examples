@@ -8,7 +8,7 @@ class GradeCalculation {
     int grade;
     int scholarshipamount;
 
-
+//ffffffdrdf
     int scholarshipcalculation( ) {
         if (markinpercentage>100) {
             System.out.println("invalid calculation of percentage");
