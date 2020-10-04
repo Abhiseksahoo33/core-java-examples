@@ -9,6 +9,7 @@ public class ConstructorExample {
 
     ConstructorExample()
     {
+        //default constuctor
         System.out.println("default constructor");
         System.out.println("first number= "+first_number);
         System.out.println("second number ="+second_number);
