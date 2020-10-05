@@ -13,7 +13,7 @@ public class ThisExampleName {
         System.out.println("last name"+last_name);
         System.out.println("first (this) name"+this.first_name); // will print the recent object passed
         System.out.println("last(this) name"+this.last_name);
-        this.addmiddlename("kumar");
+        this.addmiddlename("kumar"); // this can be used as first in construvtor body
 
     }
 
