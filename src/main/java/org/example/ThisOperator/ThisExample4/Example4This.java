@@ -13,7 +13,7 @@ public class Example4This {
     }
 
     public Example4This(int id, String name, int price) {
-        this(price);
+        this(price); // this can be added as the first line
        this.id=id;//this(id);this must be the first line
        this.name=name; //this(price); this must be the first line
         display(this);
