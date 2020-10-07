@@ -9,11 +9,11 @@ public class ThisExampleName {
     {
         this.first_name=first_name;
         this.last_name=last_name;
-        System.out.println("first name"+first_name);
-        System.out.println("last name"+last_name);
+        System.out.println("first name"+first_name);// object state
+        System.out.println("last name"+last_name); //object state
         System.out.println("first (this) name"+this.first_name); // will print the recent object passed
         System.out.println("last(this) name"+this.last_name);
-        this.addmiddlename("kumar"); // this can be used as first in construvtor body
+        this.addmiddlename("kumar"); //object behaviour
 
     }
 
@@ -29,6 +29,6 @@ public class ThisExampleName {
 public void addmiddlename(String middle_name)
 {
  this.middle_name=middle_name;
-    System.out.println("fullname od student : "+fullname());
+    System.out.println("fullname of student : "+fullname());
 }
 }

@@ -12,7 +12,7 @@ public class ThisExample2Main {
         ThisExampleName var3=new ThisExampleName("abhisek","sahoo");
        var3.printfullname();
         System.out.println("hashcode of 3rd object : "+var3.hashCode());
-
+        System.out.println(var3); // fully qualified object name
        ThisExampleName var4=new ThisExampleName("prasad","sahoo");
        var4.printfullname();
     }
