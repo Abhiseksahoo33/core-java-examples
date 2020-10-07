@@ -14,8 +14,7 @@ public class EmployeeData {
    display(); // displays informations of employee
 
     }
-    public EmployeeData() {
-    }
+
     public String getEmployee_name() {
         return employee_name;
     }
