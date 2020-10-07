@@ -1,0 +1,461 @@
+(1)  package org.example.ThisOperator.Example2This;
+
+public class ThisExampleName {
+   String first_name;
+    String last_name;
+    String middle_name;
+
+    ThisExampleName(String first_name, String last_name)
+    {
+        this.first_name=first_name;
+        this.last_name=last_name;
+        System.out.println("first name"+first_name);// object state
+        System.out.println("last name"+last_name); //object state
+        System.out.println("first (this) name"+this.first_name); // will print the recent object passed
+        System.out.println("last(this) name"+this.last_name);
+        this.addmiddlename("kumar"); //object behaviour
+
+    }
+
+   public void  printfullname()
+    {
+        System.out.println(first_name+" "+last_name);
+    }
+    public String fullname()
+    {
+      return  first_name+" "+middle_name+" "+last_name;
+    }
+
+public void addmiddlename(String middle_name)
+{
+ this.middle_name=middle_name;
+    System.out.println("fullname od student : "+fullname());
+}
+}
+
+
+
+
+
+
+
+
+package org.example.ThisOperator.Example2This;
+
+public class ThisExample2Main {
+    public static void main(String[] args) {
+      ThisExampleName var3=new ThisExampleName("abhisek","sahoo");
+       var3.printfullname();
+      
+
+       ThisExampleName var4=new ThisExampleName("prasad","sahoo");
+       var4.printfullname();
+    }
+    output
+    first nameabhisek
+last namesahoo
+first (this) nameabhisek
+last(this) namesahoo
+fullname of student : abhisek kumar sahoo
+abhisek sahoo
+
+first nameprasad
+last namesahoo
+first (this) nameprasad
+last(this) namesahoo
+fullname of student : prasad kumar sahoo
+prasad sahoo
+
+*note *
+i have uploaded it before 
+
+(2)
+defination of hashcode 
+ the hashCode method defined by class does return distinct integers for distinct
+      objects. (This is typically implemented by converting the internal
+      address of the object into an integer, but this implementation
+      technique is not required by the Java&trade; programming language.)
+     
+     
+(3)
+     fullyqualified name of the object in java is the name of the object with its class name package name 
+     example 
+
+org.example.ThisOperator.Example2This.ThisExampleName@232204a1
+
+
+(4)
+object class is in java.lang package 
+
+
+(5)public class Test
+{
+  public static void main(String[] args)
+  {
+    Object obj1 = new Object();
+    Object obj2 = new Object();
+    System.out.println(obj1.hashCode() == obj2.hashCode());
+    System.out.println(obj1.getClass());
+    System.out.println(obj1 == obj2);
+  }
+}
+          output 
+
+false    // hashcode is generated unique . different object have differnt hashcode
+class java.lang.Object // object is the class of java.lang package 
+false //objects are unique .no to  objects are same 
+
+(6)
+public class Test {
+    int x;
+    public Test(int x){
+        this.x = x;
+    }
+    public static void main(String[] args) {
+        Test t = new Test(10);
+        System.out.println(t.x);
+    }
+}
+
+           output
+ 10 // when we created the object the constructor automatocally called and the parameter  10 is assigned to x 
+ 
+ (7)
+ public class Test {
+    int x;
+    public Test(int x){
+        this.x = x;
+    }
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+
+fixing problem 
+  
+   the object creation step [     Test t = new Test();  ] have no parameter to pass , it can pass only to  a default constructor 
+   but the program contains parameterized constructor so that the compiler will not generate default constructor 
+   so we can either remove the parameter int x from  
+   public Test(int x){
+        this.x = x;
+    } // output will be 0 (default value for int )
+    
+    or we can add parameter to the object creation step 
+    
+     Test t = new Test(45);  // output 45
+    
+(8)
+public class Test {
+    int x;
+    public Test(int x){
+        this.x = x;
+    }
+    public Test()   // executes
+    { 
+        
+    }
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+
+
+will compile the default constructor will be called as no parameter is passed
+output will be 0
+
+
+(9)
+
+public class Test {
+    int x;
+    String y;
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+}
+output
+0 // as x is not initialized and default calue for int is 0
+null// as y is not initialized and default calue for String is null
+
+(10)
+
+default value of   int =0 
+                   String =null
+                   
+ (11)
+ 
+ public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        this.x = x;
+        this.y = y;
+        Test tVar = this;
+        System.out.println(tVar.hashCode() == this.hashCode());
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+}
+output
+true // the tVar is object of Test class  assigned with the recent object so the hashcode is same for both.
+10  // 10 is pased
+john // john i passed to Test constructor 
+
+(12)
+public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        this.x = x; //x=10
+        this.y = y; //y= john
+        m1(this); // calling to m1() with the recent objects x and y 
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+    
+    public void m1(Test t1) // both x and y are modified 
+    {
+        t1.x = 100; // now x=100
+        t1.y = "Doe"; // y=Doe
+    }
+}
+
+output 
+100
+Doe
+
+
+(13)
+
+public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        this.x = x;
+        this.y = y;
+        this.m1(this);
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        System.out.println(t.x == 10);
+        System.out.println(t.y == "john");
+    }
+
+    public void m1(Test t1)
+    {
+        t1.x = 100;
+        t1.y = "Doe";
+    }
+}
+
+output
+false  // x=100 , so t.x==10 false 
+false //y=Doe
+
+
+(14)
+public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        x = x;
+        y = y;
+        this.m1(this);
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+
+    public void m1(Test t1)
+    {
+        t1.x = 100;
+        t1.y = "Doe";
+    }
+}
+output
+100
+Doe
+
+(15)
+public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        x = x;
+        y = y;
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+
+    public void m1(Test t1)
+    {
+        t1.x = 100;
+        t1.y = "Doe";
+    }
+}
+output  // doubt 
+
+0
+null
+
+
+(16)
+
+public class Test {
+    int x;
+    String y;
+
+    public Test(int x, String y) {
+        x = x;
+        y = y;
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test(10,"john");
+        Test t1 = t;
+        System.out.println(t1 == t);
+        t1.x = 300;
+        t1.y = "alex";
+        System.out.println(t.x);
+        System.out.println(t.y);
+    }
+}
+output
+true// t ia assigned to t1
+300 // both t1 and t are same 
+alex
+
+(17)
+public class Calculator
+{
+   private int i;
+   private int j;
+   
+   public Calculator(int i, int j)
+   {
+     this.i = i; // object state 
+     this.j = j;// object state 
+   }
+   
+   public int sum()
+   {
+     return i + j; // object beheviour depends upon state 
+   }
+   
+   (18)
+   public class Test
+{
+  static int x;// static variable x
+  int y;
+  static{
+    x = 10; // static method
+  }
+    
+  static{      // static method
+    x = x + 20; //30
+  }
+  
+  {
+    y = 100;
+  }
+  
+  {
+    y = y + 20; //120
+  }
+  
+  public static void main(String[] args)  // static method also
+  {
+    Test t = null;
+    t.x = t.x + 40; //70
+    x = x + 50   //120
+    
+    t = new Test();
+    t.y = t.y + 200; //320
+    
+    Test t1 = new Test();
+    System.out.println(t.x)  //120
+    System.out.println(t1.x) //120
+    System.out.println(Test.x) //120 
+    
+    System.out.println(t.y)  //320
+    System.out.println(t1.y) //120
+   
+   System.out.println(t.getX()); //120
+   System.out.println(t1.getX()); //120
+   System.out.println(Test.getX());//120   
+   
+   System.out.println(t.getSum());//440
+   System.out.println(t1.getSum());//240
+   
+  }
+  
+  public static int getX()
+  {
+    return x;
+  }
+  
+  public int getSum()
+  {
+    return  x + y;
+  }
+}
+output
+
+120
+120
+120
+320
+120
+120
+120
+120
+440
+240
+
+
+(19) null pointer exception program 
+
+package org.example.activity2;
+public class Test {
+   int x;
+   Test()
+   {
+       x=10;
+       System.out.println(x);
+   }
+   void m()
+   {
+       x=12;
+   }
+
+    public static void main(String[] args) {
+      Test var=null;
+      var.x=100;  //java.lang.NullPointerException
+var.m();    // java.lang.NullPointerException
+
+    }
+}
