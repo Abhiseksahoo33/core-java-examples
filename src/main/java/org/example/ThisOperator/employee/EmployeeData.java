@@ -11,7 +11,7 @@ public class EmployeeData {
    this.status=status;
    this.Registration_no=registration_no;
    this.joining_year=joining_year;
-   display();
+   display(); // displays informations of employee
 
     }
     public EmployeeData() {
