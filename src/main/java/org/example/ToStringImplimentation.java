@@ -5,27 +5,34 @@ public class ToStringImplimentation {
     private String name;
     private int year;
 
-    public String ToStringImplimentation(int enrollment_no, String name, int year) {
+    public ToStringImplimentation(int enrollment_no, String name, int year) {
         this.enrollment_no = enrollment_no;
         this.name = name;
         this.year = year;
 
         System.out.println(this);
-        System.out.println("to string with this  : " + this);
+        System.out.println("to string with this  : " +this);
     }
 
-      /*public String toString(this) {
-            return getClass().getName() + "@" + Integer.toHexString(hashCode());
-        }
-    }*/
+      /*public String toString() {
+          return getClass().getName() + "@" + Integer.toHexString(hashCode());}
+          /**
+           * Returns a string representation of the object. In general, the
+           * {@code toString} method returns a string that
+           * "textually represents" this object. The result should
+           * be a concise but informative representation that is easy for a
+           * person to read.
+           */
+
+
         public String toString() {
-//        return "UserAccount{" +
-//                "id='" + id + '\'' +
-//                ", name='" + name + '\'' +
-//                ", balance=" + balance +
-//                '}';
-            String info = enrollment_no + ", "+ name +", "+year;
-            return info;
+        return "Student info{" +
+                "enrollment ='" + enrollment_no + '\'' +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                '}';
+           /* String info =" enrollment"+ enrollment_no + ",name "+ name +",year "+year;
+            return info;*/
         }
 
     public static void main(String[] args) {
