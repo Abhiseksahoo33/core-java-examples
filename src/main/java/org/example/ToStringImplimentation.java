@@ -41,3 +41,12 @@ public class ToStringImplimentation {
         System.out.println("Name : "+ var2.name+"\nEnrollment no :  "+ var2.enrollment_no+"\nPassout year "+ var2.year);
     }
 }
+/*
+* output
+* Student info{enrollment ='10001254', name='Abhisek sahoo', year=2022}
+to string with this  : Student info{enrollment ='10001254', name='Abhisek sahoo', year=2022}
+student info.
+Name : Abhisek sahoo
+Enrollment no :  10001254
+Passout year 2022
+* */
