@@ -95,7 +95,6 @@ public class StringClassMethodsExamples3 {
         result = s.toUpperCase();
         System.out.println(result);
         System.out.println(s);
-
         System.out.println(s.length());
         result = s.trim();
         System.out.println("trim "+result.length()); // remove the white spaces
