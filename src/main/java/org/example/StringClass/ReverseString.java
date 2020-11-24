@@ -1,4 +1,4 @@
-package org.example.array;
+package org.example.StringClass;
 
 class ReverseString {
     public static void main(String[] args)
