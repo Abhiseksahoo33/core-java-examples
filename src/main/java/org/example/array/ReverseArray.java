@@ -1,4 +1,4 @@
-package org.example.StringClass;
+package org.example.array;
 
 import java.util.Arrays;
 
