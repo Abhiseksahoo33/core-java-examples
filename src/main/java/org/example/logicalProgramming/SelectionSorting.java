@@ -11,10 +11,11 @@ public class SelectionSorting {
 
         for (int i = 0; i < arr.length - 1; i++)
         {
+            //searching for lowest value
             int index = i;
             for (int j = i + 1; j < arr.length; j++){
                 if (arr[j] < arr[index]){
-                    index = j;//searching for lowest value
+                    index = j;
                 }
             }
             // swapping between the smallest number and the inde
