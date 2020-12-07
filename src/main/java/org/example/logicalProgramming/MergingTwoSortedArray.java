@@ -3,7 +3,7 @@ package org.example.logicalProgramming;
 import java.util.Arrays;
 
 public class MergingTwoSortedArray {
-    static void merging(int[]arr1,int[]arr2)
+    public static void merging(int[]arr1,int[]arr2) // it will catch the values of the two arrays ..
     {
         // displaying the two array before sorting
         System.out.println("arr1[] : "+ Arrays.toString(arr1));
@@ -14,7 +14,7 @@ public class MergingTwoSortedArray {
         int v2 =  arr2[0] ;               //first element of arr2
 while(true)
 {
-    if(v1<=v2)
+    if(v1<=v2) // will check the last element of arr1 and the first element of arr2 whether it is v1< v2 or not
         break;
     else
     {
@@ -29,7 +29,7 @@ while(true)
 
 
     }
-
+ // insertion sorting used ...
     private static void insertAtFirst(int[] arr2, int v1) {
         int n2 = arr2.length;
         int temp = 0;
@@ -61,9 +61,9 @@ while(true)
         }
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         int arr1[]= {2, 5, 10, 15, 20};
         int arr2[]={10, 12, 13};
         merging(arr1,arr2);
-    }
+    }*/
 }
