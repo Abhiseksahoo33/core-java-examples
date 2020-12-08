@@ -10,10 +10,11 @@ public class MergingTwoSortedArray {
         System.out.println("arr2[] : "+ Arrays.toString(arr2));
 
 
-        int v1 = arr1[arr1.length-1];    // last element of arr1
-        int v2 =  arr2[0] ;               //first element of arr2
+
 while(true)
 {
+       int v1 = arr1[arr1.length-1];    // last element of arr1
+            int v2 =  arr2[0] ;               //first element of arr2
     if(v1<=v2) // will check the last element of arr1 and the first element of arr2 whether it is v1< v2 or not
         break;
     else
@@ -23,11 +24,8 @@ while(true)
         System.out.println("==========================");
         System.out.println("sorted arr1 :"+Arrays.toString(arr1));
         System.out.println("sorted arr2 :"+Arrays.toString(arr2));
-        break;
     }
 }
-
-
     }
  // insertion sorting used ...
     private static void insertAtFirst(int[] arr2, int v1) {
@@ -67,3 +65,5 @@ while(true)
         merging(arr1,arr2);
     }*/
 }
+/*sorted arr1 :[2, 5, 10, 10, 12]
+sorted arr2 :[13, 15, 20]*/
