@@ -1,5 +1,6 @@
 package org.example.collections;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -54,7 +55,7 @@ ArrayList<String> a1 = new ArrayList<>();
         System.out.println(al); //[doe, john]
 
     }
-    public static void main(String[] args) {
+    public static void m4(String[] args) {
 
         // ArrayList<String> al = new ArrayList<>();
         List<String> al = new ArrayList();
@@ -68,6 +69,24 @@ ArrayList<String> a1 = new ArrayList<>();
         int size = al.size();
         String[] strArray = al.toArray(new String[size]);
         System.out.println(Arrays.toString(strArray));
+    }
+
+    public static void main(String[] args) {
+        List<String> al  =  new ArrayList<>();
+        al.add("abhi");
+        al.add("abhi");
+        al.add("max");
+        System.out.println(al);
+       // System.out.println(al.removeAll(al)); // remove all the elments  form the Arraylist.
+        System.out.println(al.size());// 0
+        //one  more arraylist
+        List<String> al1 = new ArrayList<>();
+        al1.add("abhi");
+        al1.add("max");
+        al1.add("laax");
+        System.out.println(al);
+        System.out.println(al.retainAll(al1));
+        System.out.println(al);  //[abhi, abhi, max] -- prints all the common elemets
     }
 
 
