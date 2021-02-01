@@ -1,5 +1,5 @@
 package org.example.activity05;
-
+import java.lang.Object;
 public class VariableHidding {
     public static void main(String[] args) {
         Variable var=new Variable();
@@ -16,4 +16,5 @@ class Variable{
         System.out.println("local variable: "+i);  //20
 
     }
+
 }

@@ -11,7 +11,7 @@ public class SortingOfArray3 {
         Employee e2 = new Employee(2, "abhisek", "Campgemin");
         Employee e3 = new Employee(3, "sambit", "ISRO");
         Employee e4 = new Employee(4, "ritesh", "MIndtree");
-        Employee e5= new Employee(4, "bikash", "MIndtree");
+        Employee e5= new Employee(5, "bikash", "MIndtree");
 
             // sort employee array by company name
 

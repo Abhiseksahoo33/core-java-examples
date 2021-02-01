@@ -1,5 +1,7 @@
 package org.example.collections;
 
+import org.example.array.Employee;
+
 import java.security.spec.RSAOtherPrimeInfo;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,7 +73,7 @@ ArrayList<String> a1 = new ArrayList<>();
         System.out.println(Arrays.toString(strArray));
     }
 
-    public static void main(String[] args) {
+    public static void m5(String[] args) {
         List<String> al  =  new ArrayList<>();
         al.add("abhi");
         al.add("abhi");
@@ -87,6 +89,23 @@ ArrayList<String> a1 = new ArrayList<>();
         System.out.println(al);
         System.out.println(al.retainAll(al1));
         System.out.println(al);  //[abhi, abhi, max] -- prints all the common elemets
+    }
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        Employee e2 = new Employee();
+
+        List<Employee> el = new ArrayList<>();
+        el.add(e1);
+        el.add(e2);
+
+        Employee e3 = new Employee();
+        List<Employee> rl = new ArrayList<>();
+        rl.add(e3);
+        rl.add(e1);
+
+        el.retainAll(rl); // e1
+        System.out.println(el);// [Employee{id=null, name='null', companyName='null'}]
     }
 
 
